@@ -7451,7 +7451,7 @@ h1, h2, h3, h4, h5,
       padding-bottom: 0.9rem !important;
       color: #000 !important; }
       .ftco-navbar-light.scrolled .nav-link.active {
-        color: #f86f2d !important; }
+        color: #2f2f89 !important; }
     .ftco-navbar-light.scrolled.awake {
       margin-top: 0px;
       -webkit-transition: .3s all ease-out;
@@ -8831,6 +8831,21 @@ textarea.form-control {
 .contact-section .contact-info p span {
   color: #000; }
 
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .block-9 .form-control {
   outline: none !important;
   -webkit-box-shadow: none !important;
