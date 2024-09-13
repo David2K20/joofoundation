@@ -88,18 +88,31 @@
         <div class="row block-9">
           <div class="col-md-6 pr-md-5">
           	<h4 class="mb-4 text-body">Do you have any questions?</h4>
-            <form action="#">
+            <form action="https://formsubmit.co/your@email.com" method="POST">
+
+            <!-- Honeypot -->
+						<input type="text" name="_honey" style="display: none;">
+						<!-- Honeypot -->
+
+						<!-- Disable Captcha -->
+						<input type="hidden" name="_captcha" value="false">
+						<!-- Disable Captcha -->
+
+						<!-- Success page -->
+						<input type="hidden" name="_next" value="https://joofoundation.vercel.app/contact.html">
+						<!-- Success page -->
+
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" name="Name" class="form-control" placeholder="Name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" name="Email" class="form-control" placeholder="Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" name="Subject" class="form-control" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea id="" name="Message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
