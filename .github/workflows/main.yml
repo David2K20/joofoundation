@@ -1,0 +1,25 @@
+name: jooF Website via FTP
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment when pushing to 'main'
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up FTP client and deploy
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ftp.joofoundation.com.ng
+          username: deploy@joofoundation.com.ng
+          password: jooFoundation12!
+          port: 21  # Optional: default is 21
+          server-dir: /home/vmjkgoip/public_html/  # Path to the folder on the FTP server
