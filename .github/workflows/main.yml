@@ -22,4 +22,4 @@ jobs:
           username: deploy@joofoundation.com.ng
           password: jooFoundation12!
           port: 21  # Optional: default is 21
-          server-dir: /home/vmjkgoip/public_html  # Path to the folder on the FTP server
+          server-dir: /home/vmjkgoip/public_html/  # Path to the folder on the FTP server
