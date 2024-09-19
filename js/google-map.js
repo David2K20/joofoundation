@@ -60,3 +60,36 @@ function init() {
     
 }
 google.maps.event.addDomListener(window, 'load', init);
+
+
+document.getElementById('play-video').addEventListener('click', function(event) {
+    event.preventDefault(); 
+
+    const videoContainer = document.getElementById('videoContainer');
+    const youtubeVideo = document.getElementById('youtubeVideo');
+
+    
+    youtubeVideo.src = 'https://www.youtube.com/embed/BpoGkyllVKU?autoplay=1'; 
+    videoContainer.style.display = 'block'; 
+});
+
+document.getElementById('close-video').addEventListener('click', function() {
+    closeVideo();
+});
+
+
+function closeVideo() {
+    const videoContainer = document.getElementById('videoContainer');
+    const youtubeVideo = document.getElementById('youtubeVideo');
+
+    videoContainer.style.display = 'none'; 
+    youtubeVideo.src = ''; 
+}
+
+
+document.addEventListener('click', function(event) {
+    const videoContainer = document.getElementById('videoContainer');
+    if (videoContainer.style.display === 'block' && !videoContainer.contains(event.target) && !document.getElementById('play-video').contains(event.target)) {
+        closeVideo();
+    }
+});
