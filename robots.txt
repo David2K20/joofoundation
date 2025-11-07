@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://joofoundation.com.ng/sitemap.xml
+
+# Disallow admin areas if any
+Disallow: /cgi-bin/
+Disallow: /.git/
+
+# Allow all CSS, JS, and images
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/

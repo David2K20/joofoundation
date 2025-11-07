@@ -1,0 +1,117 @@
+/* Upcoming Events Section Styling */
+#upcoming-events {
+  position: relative;
+  background: #fff;
+}
+
+.event-wrap {
+  background: #fff;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.event-wrap:hover {
+  box-shadow: 0 15px 40px 0 rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.event-image {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .event-wrap {
+    display: flex;
+  }
+  
+  .event-image {
+    width: 40%;
+    min-height: 400px;
+    height: auto;
+  }
+}
+
+.event-details {
+  flex: 1;
+  background: #fff;
+}
+
+.event-details h3 {
+  color: #000;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.event-meta span {
+  color: #f86f2d;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.event-meta i {
+  color: #f86f2d;
+  margin-right: 8px;
+}
+
+.event-location {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.event-location i {
+  color: #f86f2d;
+}
+
+.event-description {
+  color: #7a7a7a;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Structured Data Event Badge */
+.event-badge {
+  display: inline-block;
+  background: #f86f2d;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .event-image {
+    height: 250px;
+  }
+  
+  .event-details h3 {
+    font-size: 22px;
+  }
+  
+  .event-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Animation is handled by aos.js library */
