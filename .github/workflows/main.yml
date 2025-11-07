@@ -19,7 +19,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ftp.joofoundation.com.ng
-          username: deploy@joofoundation.com.ng
-          password: jooFoundation12!
-          port: 21  # Optional: defaultt is 21
-          server-dir: /home/vmjkgoip/public_html/  # Path to the folder on the FTP server
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps  # Try FTPS (FTP over SSL)
+          port: 21
+          server-dir: /home/vmjkgoip/public_html/
